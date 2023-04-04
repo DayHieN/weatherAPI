@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2282%22>🌦️</text></svg>"
+    />
+    <script
+      src="https://kit.fontawesome.com/784ed33fa0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather Report</title>
+  </head>
+
+  <body>
+    <div class="app-container">
+      <div class="card-container">
+        
+        
+        <div class="input-container">
+          <input type="text" name="city" id="input" class="input" />
+          <button
+            type="submit"
+            onclick="getInputValue()"
+            aria-placeholder="Enter your city"
+          >
+            Submit
+          </button>
+        </div>
+
+        <div class="info-container">
+          <table>
+            <tr>
+              <td colspan="3">
+                <i class="fa fa-light fa-city">
+                  <p class="city"></p>
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa fa-light fa-temperature-three-quarters">
+                  <p class="temp">temp</p>
+                  <i class="fa fa-light fa-circle-heart">
+                    <p class="feels-like">feels like</p>
+                  </i>
+                </i>
+              </td>
+              <td colspan="2">
+                <i id="weather-type" class="fa fa-light fa-sun">
+                  <p class="weather-type">weather type</p>
+                  <p class="weather-desc">weather description</p>
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa fa-light fa-temperature-arrow-down">
+                  <p class="info temp-min">temp-min</p>
+                </i>
+              </td>
+              <td>
+                <i class="fa fa-light fa-compass">
+                  <p class="info wind-deg">wind deg</p>
+                </i>
+              </td>
+              <td>
+                <i class="fa fa-light fa-wind">
+                  <p class="info wind-speed">wind speed</p>
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa fa-light fa-temperature-arrow-up">
+                  <p class="info temp-max">temp-max</p>
+                </i>
+              </td>
+              <td>
+                <i class="fa fa-light fa-droplet">
+                  <p class="info humidity">humidity</p>
+                </i>
+              </td>
+              <td>
+                <i class="fa fa-light fa-chart-simple">
+                  <p class="info pressure">pressure</p>
+                </i>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
